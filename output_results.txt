@@ -1,0 +1,60 @@
+[
+    {
+        "name": "A Beginner\u2019s Guide to Crypto - How To Start",
+        "description": "\ud83e\udd16 Get Swissborg & up to \u20ac100 FREE \ud83d\udc49 https://join.swissborg.com/en/r/moonr...\n\ud83d\uded2 Get The Hottest Crypto Deals \ud83d\udc49 http://www.coinbureau.com/deals\n\ud83d\udca5 Coin Bureau Discord \ud83d\udc49 https://go.coinbureau.com/cb-discord\n\ud83d\udcf2 Insider Info in our Socials \ud83d\udc49 https://www.coinbureau.com/socials/\n\ud83d\udc55 Best Crypto Merch \ud83d\udc49 https://store.coinbureau.com\n\ud83d\udd25 TOP Crypto TIPS In Our Newsletter \ud83d\udc49 https://www.coinbureau.com/newsletters/\n\n~~~~~\n\n\ud83d\udcfa Essential Videos \ud83d\udcfa\n\nTrezor Wallet Tutorial \ud83d\udc49 \u00a0\u00a0\u00a0\u2022\u00a0Trezor\u00a0Crypto\u00a0Wallet:\u00a0Unboxing\u00a0&\u00a0Setu...\u00a0\u00a0\nBitcoin vs. Gold \ud83d\udc49 \u00a0\u00a0\u00a0\u2022\u00a0Bitcoin\u00a0vs.\u00a0Gold:\u00a0Which\u00a0is\u00a0Best?\u00a0The\u00a0...\u00a0\u00a0\n\n~~~~~\n\n\u26d3\ufe0f \ud83d\udd17 Useful Links \ud83d\udd17 \u26d3\ufe0f\n\n\u25ba Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB\n\u25ba Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...\n\u25ba Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...\n\u25ba How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...\n\u25ba How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...\n\n~~~~~\n\nTIMESTAMPS -\n0:00 Intro\n0:51 Bitcoin vs. BTC\n3:55 How To Buy Bitcoin\n6:50 Create A Swissborg Account\n11:59 Buy BTC, Get Free Crypto\n15:22 Bitcoin Tips For Max Gains\n19:53 Outro\n\n~~~~~\n\n\ud83d\udcdc Disclaimer \ud83d\udcdc\n\nThe information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.\n\n#Crypto #BTC #Bitcoin",
+        "imageUrl": "https://img.youtube.com/vi/qqO9-uj-m2o/hqdefault.jpg",
+        "subCourses": [
+            {
+                "imageUrl": "https://img.youtube.com/vi/qqO9-uj-m2o/hqdefault.jpg",
+                "videoUrl": "https://www.youtube.com/embed/qqO9-uj-m2o",
+                "name": "How to Buy BITCOIN: Step By Step Guide for Beginners 2024!"
+            },
+            {
+                "imageUrl": "https://img.youtube.com/vi/bw1piBAOG9s/hqdefault.jpg",
+                "videoUrl": "https://www.youtube.com/embed/bw1piBAOG9s",
+                "name": "How To Research Crypto In 2024: Ultimate Guide!!"
+            },
+            {
+                "imageUrl": "https://img.youtube.com/vi/q2cT_jMup_w/hqdefault.jpg",
+                "videoUrl": "https://www.youtube.com/embed/q2cT_jMup_w",
+                "name": "How To Trade Bitcoin: Complete Step-by-Step Guide To BTC Gains!"
+            },
+            {
+                "imageUrl": "https://img.youtube.com/vi/MaBcOuemWw0/hqdefault.jpg",
+                "videoUrl": "https://www.youtube.com/embed/MaBcOuemWw0",
+                "name": "How To Find 100x Cryptos Early?! Complete Step-by-Step Guide!"
+            },
+            {
+                "imageUrl": "https://img.youtube.com/vi/U21KQM-jqjM/hqdefault.jpg",
+                "videoUrl": "https://www.youtube.com/embed/U21KQM-jqjM",
+                "name": "Become a Memecoin Millionaire!! Our Guide To The NEXT 100x!!"
+            },
+            {
+                "imageUrl": "https://img.youtube.com/vi/QO-iK4PlkWw/hqdefault.jpg",
+                "videoUrl": "https://www.youtube.com/embed/QO-iK4PlkWw",
+                "name": "How To Make Money in CRYPTO on a Budget: Investing Guide!!"
+            },
+            {
+                "imageUrl": "https://img.youtube.com/vi/LVXI4R6pJRk/hqdefault.jpg",
+                "videoUrl": "https://www.youtube.com/embed/LVXI4R6pJRk",
+                "name": "How To Get Rich: 10 Step Guide To Wealth Generation!!"
+            },
+            {
+                "imageUrl": "https://img.youtube.com/vi/IUmz-sUbnMw/hqdefault.jpg",
+                "videoUrl": "https://www.youtube.com/embed/IUmz-sUbnMw",
+                "name": "Is It Time To BUY Crypto!? Altcoin Accumulation Guide!!"
+            },
+            {
+                "imageUrl": "https://img.youtube.com/vi/SXqfFTmYmT0/hqdefault.jpg",
+                "videoUrl": "https://www.youtube.com/embed/SXqfFTmYmT0",
+                "name": "Explain BITCOIN to Complete Beginners: Ultimate Guide!!"
+            },
+            {
+                "imageUrl": "https://img.youtube.com/vi/2GktMxR3wak/hqdefault.jpg",
+                "videoUrl": "https://www.youtube.com/embed/2GktMxR3wak",
+                "name": "Finding Coins BEFORE They EXPLODE!! Complete Guide!"
+            }
+        ],
+        "instructor": "Unknown"
+    }
+]
