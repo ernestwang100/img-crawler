@@ -6,10 +6,10 @@ import json
 proxies = None  # Set your proxy if necessary
 
 
-def fetch_youtube_playlist_data(url: str, instructor: str = None):
+def fetch_youtube_playlist_data(url: str):
     """
     Fetch YouTube playlist data (videos, title, description, instructor)
-    from the given URL. Optionally takes an instructor name.
+    from the given URL.
     """
     try:
         if proxies:
@@ -29,17 +29,10 @@ def fetch_youtube_playlist_data(url: str, instructor: str = None):
         yt_initial_data = json.loads(initial_data_match.group(1))
 
         # Debugging: Print the entire yt_initial_data to understand its structure
-        print("yt_initial_data:", json.dumps(
-            yt_initial_data.get("contents", {})))
+        # print("yt_initial_data:", json.dumps(
+        #     yt_initial_data.get("contents", {})))
 
-        video_items = (
-            yt_initial_data.get("contents", {})
-            .get("twoColumnWatchNextResults", {})
-            .get("playlist", {})
-            .get("playlist", {})
-            .get("contents", [])
-        )
-
+        # Extract the playlist's name and description
         name = (
             yt_initial_data.get("contents", {})
             .get("twoColumnWatchNextResults", {})
@@ -57,41 +50,50 @@ def fetch_youtube_playlist_data(url: str, instructor: str = None):
             .get("content", "")
         )
 
+        # Extract video items (list of videos in the playlist)
+        video_items = (
+            yt_initial_data.get("contents", {})
+            .get("twoColumnWatchNextResults", {})
+            .get("playlist", {})
+            .get("playlist", {})
+            .get("contents", [])
+        )
+
         if not video_items:
             print(f"Error: No video items found in {url}")
             return None
 
+        # Collect video data
         video_data = []
         for item in video_items:
             video_renderer = item.get("playlistPanelVideoRenderer", {})
             title = video_renderer.get("title", {}).get("simpleText", "N/A")
             video_id = video_renderer.get("videoId", "")
 
+            # Extract creator's name from the video
+            creator = "Unknown"
+            long_byline_text = video_renderer.get("longBylineText", {})
+            runs = long_byline_text.get("runs", [])
+
+            if runs:
+                # Get the first run text (creator's name)
+                creator = runs[0].get("text", "Unknown")
+
             video_data.append(
                 {
                     "imageUrl": f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg",
                     "videoUrl": f"https://www.youtube.com/embed/{video_id}",
                     "name": title,
+                    "instructor": creator,  # Save instructor for each video
                 }
             )
-
-        # If instructor is not passed, we might extract from the page, if available
-        if not instructor:
-            # Try extracting instructor from the HTML metadata if not provided
-            creator = yt_initial_data.get("header", {}).get(
-                "c4TabbedHeaderRenderer", {}).get("owner", {}).get("title", "Unknown")
-            if creator != "Unknown":
-                instructor = creator
-            else:
-                # If no creator info found, default to "Unknown"
-                instructor = "Unknown"
 
         result = {
             "name": name,
             "description": description,
             "imageUrl": video_data[0]["imageUrl"] if video_data else "",
-            "subCourses": video_data,
-            "instructor": instructor,
+            "subCourses": video_data,  # Include the list of videos with instructor info
+            "instructor": creator,
         }
 
         return result
@@ -122,7 +124,7 @@ def crawl_from_file(input_file: str, output_file: str):
             continue
 
         print(f"Crawling data for: {url}")
-        # Call the fetch function (can pass instructor if known, else leave it None)
+        # Call the fetch function (instructor will be fetched from YouTube)
         result = fetch_youtube_playlist_data(url)
 
         if result:

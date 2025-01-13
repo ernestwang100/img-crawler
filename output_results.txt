@@ -7,54 +7,64 @@
             {
                 "imageUrl": "https://img.youtube.com/vi/qqO9-uj-m2o/hqdefault.jpg",
                 "videoUrl": "https://www.youtube.com/embed/qqO9-uj-m2o",
-                "name": "How to Buy BITCOIN: Step By Step Guide for Beginners 2024!"
+                "name": "How to Buy BITCOIN: Step By Step Guide for Beginners 2024!",
+                "instructor": "Coin Bureau"
             },
             {
                 "imageUrl": "https://img.youtube.com/vi/bw1piBAOG9s/hqdefault.jpg",
                 "videoUrl": "https://www.youtube.com/embed/bw1piBAOG9s",
-                "name": "How To Research Crypto In 2024: Ultimate Guide!!"
+                "name": "How To Research Crypto In 2024: Ultimate Guide!!",
+                "instructor": "Coin Bureau"
             },
             {
                 "imageUrl": "https://img.youtube.com/vi/q2cT_jMup_w/hqdefault.jpg",
                 "videoUrl": "https://www.youtube.com/embed/q2cT_jMup_w",
-                "name": "How To Trade Bitcoin: Complete Step-by-Step Guide To BTC Gains!"
+                "name": "How To Trade Bitcoin: Complete Step-by-Step Guide To BTC Gains!",
+                "instructor": "Coin Bureau"
             },
             {
                 "imageUrl": "https://img.youtube.com/vi/MaBcOuemWw0/hqdefault.jpg",
                 "videoUrl": "https://www.youtube.com/embed/MaBcOuemWw0",
-                "name": "How To Find 100x Cryptos Early?! Complete Step-by-Step Guide!"
+                "name": "How To Find 100x Cryptos Early?! Complete Step-by-Step Guide!",
+                "instructor": "Coin Bureau"
             },
             {
                 "imageUrl": "https://img.youtube.com/vi/U21KQM-jqjM/hqdefault.jpg",
                 "videoUrl": "https://www.youtube.com/embed/U21KQM-jqjM",
-                "name": "Become a Memecoin Millionaire!! Our Guide To The NEXT 100x!!"
+                "name": "Become a Memecoin Millionaire!! Our Guide To The NEXT 100x!!",
+                "instructor": "Coin Bureau"
             },
             {
                 "imageUrl": "https://img.youtube.com/vi/QO-iK4PlkWw/hqdefault.jpg",
                 "videoUrl": "https://www.youtube.com/embed/QO-iK4PlkWw",
-                "name": "How To Make Money in CRYPTO on a Budget: Investing Guide!!"
+                "name": "How To Make Money in CRYPTO on a Budget: Investing Guide!!",
+                "instructor": "Coin Bureau"
             },
             {
                 "imageUrl": "https://img.youtube.com/vi/LVXI4R6pJRk/hqdefault.jpg",
                 "videoUrl": "https://www.youtube.com/embed/LVXI4R6pJRk",
-                "name": "How To Get Rich: 10 Step Guide To Wealth Generation!!"
+                "name": "How To Get Rich: 10 Step Guide To Wealth Generation!!",
+                "instructor": "Coin Bureau"
             },
             {
                 "imageUrl": "https://img.youtube.com/vi/IUmz-sUbnMw/hqdefault.jpg",
                 "videoUrl": "https://www.youtube.com/embed/IUmz-sUbnMw",
-                "name": "Is It Time To BUY Crypto!? Altcoin Accumulation Guide!!"
+                "name": "Is It Time To BUY Crypto!? Altcoin Accumulation Guide!!",
+                "instructor": "Coin Bureau"
             },
             {
                 "imageUrl": "https://img.youtube.com/vi/SXqfFTmYmT0/hqdefault.jpg",
                 "videoUrl": "https://www.youtube.com/embed/SXqfFTmYmT0",
-                "name": "Explain BITCOIN to Complete Beginners: Ultimate Guide!!"
+                "name": "Explain BITCOIN to Complete Beginners: Ultimate Guide!!",
+                "instructor": "Coin Bureau"
             },
             {
                 "imageUrl": "https://img.youtube.com/vi/2GktMxR3wak/hqdefault.jpg",
                 "videoUrl": "https://www.youtube.com/embed/2GktMxR3wak",
-                "name": "Finding Coins BEFORE They EXPLODE!! Complete Guide!"
+                "name": "Finding Coins BEFORE They EXPLODE!! Complete Guide!",
+                "instructor": "Coin Bureau"
             }
         ],
-        "instructor": "Unknown"
+        "instructor": "Coin Bureau"
     }
 ]
