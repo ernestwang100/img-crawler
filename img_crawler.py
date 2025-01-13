@@ -29,8 +29,7 @@ def fetch_youtube_playlist_data(url: str):
         yt_initial_data = json.loads(initial_data_match.group(1))
 
         # Debugging: Print the entire yt_initial_data to understand its structure
-        # print("yt_initial_data:", json.dumps(
-        #     yt_initial_data.get("contents", {})))
+        # print("yt_initial_data:", json.dumps(yt_initial_data.get("contents", {})))
 
         # Extract the playlist's name and description
         name = (
@@ -81,10 +80,10 @@ def fetch_youtube_playlist_data(url: str):
 
             video_data.append(
                 {
-                    "imageUrl": f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg",
-                    "videoUrl": f"https://www.youtube.com/embed/{video_id}",
                     "name": title,
                     "instructor": creator,  # Save instructor for each video
+                    "imageUrl": f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg",
+                    "videoUrl": f"https://www.youtube.com/embed/{video_id}",
                 }
             )
 
@@ -112,33 +111,66 @@ def fetch_youtube_playlist_data(url: str):
 def crawl_from_file(input_file: str, output_file: str):
     """
     Read URLs from the input file, crawl YouTube playlists, and save results
-    to the output file.
+    to the output file in SQL format.
     """
-    results = []
-    with open(input_file, 'r') as file:
-        urls = file.readlines()
+    all_values = []  # List to accumulate values for SQL insert
 
-    for url in urls:
-        url = url.strip()
-        if not url:
-            continue
-
-        print(f"Crawling data for: {url}")
-        # Call the fetch function (instructor will be fetched from YouTube)
-        result = fetch_youtube_playlist_data(url)
-
-        if result:
-            results.append(result)
-
-    # Save the results to the output file
     with open(output_file, 'w') as output:
-        json.dump(results, output, indent=4)
+        # Start the SQL INSERT INTO statement once
+        insert_statement = """
+INSERT INTO spiritai_v2.courses (
+    uuid, coursesCategoryId, name,
+    instructor, imageUrl, videoUrl, description, isOpen, trialTime,
+    active, createTime
+)
+VALUES
+"""
+
+        output.write(insert_statement)
+
+        for line in open(input_file):
+            url = line.strip()
+            if not url:
+                continue
+
+            print(f"Crawling data for: {url}")
+            result = fetch_youtube_playlist_data(url)
+
+            if result:
+                # For each video, create a value tuple
+                for video in result['subCourses']:
+                    video_name = video['name']
+                    video_instructor = video['instructor']
+                    video_image_url = video['imageUrl']
+                    video_url = video['videoUrl']
+
+                    value_tuple = f"""
+(
+    UUID(),  -- Using UUID() to generate a new UUID for each row
+    2,  -- Setting coursesCategoryId to 2
+    '{video_name}',  -- course name
+    '{video_instructor}',  -- instructor
+    '{video_image_url}',  -- imageUrl
+    '{video_url}',  -- videoUrl
+    '', -- Description
+    TRUE,  -- isOpen (TRUE or FALSE)
+    30,    -- trialTime (in days, example value)
+    TRUE,  -- active (TRUE or FALSE)
+    NOW()  -- Updated timestamp
+)
+"""
+                    all_values.append(value_tuple)
+
+        # Write all values in a single insert block
+        output.write(",\n".join(all_values))  # Join all values with commas
+        output.write(";\n")  # Close the SQL statement with a semicolon
 
     print(f"Crawling complete. Results saved to {output_file}.")
 
 
 # Usage example
 input_file = 'input_urls.txt'  # Replace with the path to your input file
-output_file = 'output_results.txt'  # Replace with the path to your output file
+# Replace with the path to your output SQL file
+output_file = 'output_results.sql'
 
 crawl_from_file(input_file, output_file)
