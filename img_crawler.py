@@ -146,17 +146,12 @@ VALUES
 
                     value_tuple = f"""
 (
-    UUID(),  -- Using UUID() to generate a new UUID for each row
     2,  -- Setting coursesCategoryId to 2
     '{video_name}',  -- course name
     '{video_instructor}',  -- instructor
     '{video_image_url}',  -- imageUrl
     '{video_url}',  -- videoUrl
-    '', -- Description
-    TRUE,  -- isOpen (TRUE or FALSE)
-    30,    -- trialTime (in days, example value)
-    TRUE,  -- active (TRUE or FALSE)
-    NOW()  -- Updated timestamp
+    '' -- Description
 )
 """
                     all_values.append(value_tuple)
