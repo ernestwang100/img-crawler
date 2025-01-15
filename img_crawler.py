@@ -1,207 +1,206 @@
 import requests
 import re
 import json
+from typing import Optional, Dict, List
+from dataclasses import dataclass
+from pathlib import Path
+import logging
 
-# Define global variable for proxies (if needed)
-proxies = None  # Set your proxy if necessary
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
-def fetch_youtube_playlist_data(url: str):
-    """
-    Fetch YouTube playlist data (videos, title, description, instructor)
-    from the given URL.
-    """
-    try:
-        if proxies:
-            response = requests.get(url, proxies=proxies)
-        else:
-            response = requests.get(url)
-        response.raise_for_status()
-        html_text = response.text
+@dataclass
+class VideoData:
+    name: str
+    instructor: str
+    image_url: str
+    video_url: str
 
-        # Extract ytInitialData from the HTML
-        initial_data_match = re.search(
-            r"var ytInitialData = ({.*?});", html_text)
-        if not initial_data_match:
-            print(f"Error: ytInitialData not found in {url}")
+
+@dataclass
+class PlaylistData:
+    name: str
+    description: str
+    image_url: str
+    instructor: str
+    sub_courses: List[VideoData]
+
+
+class YouTubePlaylistCrawler:
+    def __init__(self, proxies: Optional[Dict] = None):
+        self.proxies = proxies
+
+    def _sanitize_text(self, text: str) -> str:
+        """Sanitize text for SQL insertion."""
+        return text.replace("'", "''").replace('"', '""')
+
+    def _fetch_data(self, url: str) -> Optional[dict]:
+        """Fetch raw data from YouTube URL."""
+        try:
+            response = requests.get(url, proxies=self.proxies)
+            response.raise_for_status()
+
+            initial_data_match = re.search(
+                r"var ytInitialData = ({.*?});", response.text)
+            if not initial_data_match:
+                logger.error(f"ytInitialData not found in {url}")
+                return None
+
+            return json.loads(initial_data_match.group(1))
+
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Request error: {e}")
+        except json.JSONDecodeError as e:
+            logger.error(f"JSON decoding error: {e}")
+        except Exception as e:
+            logger.error(f"Unknown error: {e}")
+
+        return None
+
+    def fetch_playlist_data(self, url: str) -> Optional[PlaylistData]:
+        """Fetch and parse YouTube playlist data."""
+        yt_initial_data = self._fetch_data(url)
+        if not yt_initial_data:
             return None
 
-        yt_initial_data = json.loads(initial_data_match.group(1))
-
-        # Debugging: Print the entire yt_initial_data to understand its structure
-        # print("yt_initial_data:", json.dumps(yt_initial_data.get("contents", {})))
-
-        # Extract the playlist's name and description
-        name = (
-            yt_initial_data.get("contents", {})
-            .get("twoColumnWatchNextResults", {})
-            .get("playlist", {})
-            .get("playlist", {})["title"]
-        )
-
-        description = (
-            yt_initial_data.get("contents", {})
-            .get("twoColumnWatchNextResults", {})
-            .get("results", {})
-            .get("results", {})
-            .get("contents", [])[1]["videoSecondaryInfoRenderer"]
-            .get("attributedDescription", {})
-            .get("content", "")
-        )
-
-        # Extract video items (list of videos in the playlist)
-        video_items = (
-            yt_initial_data.get("contents", {})
-            .get("twoColumnWatchNextResults", {})
-            .get("playlist", {})
-            .get("playlist", {})
-            .get("contents", [])
-        )
-
-        if not video_items:
-            print(f"Error: No video items found in {url}")
-            return None
-
-        # Collect video data
-        video_data = []
-        for item in video_items:
-            video_renderer = item.get("playlistPanelVideoRenderer", {})
-            title = video_renderer.get("title", {}).get("simpleText", "N/A")
-            video_id = video_renderer.get("videoId", "")
-
-            # Extract creator's name from the video
-            creator = "Unknown"
-            long_byline_text = video_renderer.get("longBylineText", {})
-            runs = long_byline_text.get("runs", [])
-
-            if runs:
-                # Get the first run text (creator's name)
-                creator = runs[0].get("text", "Unknown")
-
-            video_data.append(
-                {
-                    "name": title.replace('’', '\'').replace('”', '\"').replace('“', '\"'),
-                    "instructor": creator,  # Save instructor for each video
-                    "imageUrl": f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg",
-                    "videoUrl": f"https://www.youtube.com/embed/{video_id}",
-                }
+        try:
+            # Extract playlist metadata
+            playlist_data = (
+                yt_initial_data.get("contents", {})
+                .get("twoColumnWatchNextResults", {})
+                .get("playlist", {})
+                .get("playlist", {})
             )
 
-        result = {
-            "name": name,
-            "description": description.replace('’', '\''),
-            "imageUrl": video_data[0]["imageUrl"] if video_data else "",
-            "subCourses": video_data,  # Include the list of videos with instructor info
-            "instructor": creator,
-        }
+            name = playlist_data.get("title", "")
 
-        return result
+            # Extract description
+            description = (
+                yt_initial_data.get("contents", {})
+                .get("twoColumnWatchNextResults", {})
+                .get("results", {})
+                .get("results", {})
+                .get("contents", [])[1]
+                .get("videoSecondaryInfoRenderer", {})
+                .get("attributedDescription", {})
+                .get("content", "")
+            )
 
-    except requests.exceptions.RequestException as e:
-        print(f"Request error: {e}")
-        return None
-    except json.JSONDecodeError as e:
-        print(f"JSON decoding error: {e}")
-        return None
-    except Exception as e:
-        print(f"Unknown error: {e}")
-        return None
+            # Extract videos
+            video_items = playlist_data.get("contents", [])
+            if not video_items:
+                logger.error(f"No video items found in {url}")
+                return None
 
+            videos = []
+            instructor = "Unknown"
 
-def crawl_from_file(input_file: str, output_file: str):
-    """
-    Read URLs from the input file, crawl YouTube playlists, and save results
-    to the output file in SQL format.
-    """
-    all_values = []  # List to accumulate values for SQL insert
+            for item in video_items:
+                video_renderer = item.get("playlistPanelVideoRenderer", {})
+                if not video_renderer:
+                    continue
 
-    with open(output_file, 'w') as output:
-        # Start the SQL INSERT INTO statement once
+                video_id = video_renderer.get("videoId", "")
+                title = video_renderer.get(
+                    "title", {}).get("simpleText", "N/A")
 
-        insert_statement = """
+                # Extract creator's name
+                runs = video_renderer.get("longBylineText", {}).get("runs", [])
+                if runs:
+                    instructor = runs[0].get("text", "Unknown")
+
+                videos.append(VideoData(
+                    name=self._sanitize_text(title),
+                    instructor=instructor,
+                    image_url=f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg",
+                    video_url=f"https://www.youtube.com/embed/{video_id}"
+                ))
+
+            first_image_url = videos[0].image_url if videos else ""
+
+            return PlaylistData(
+                name=self._sanitize_text(name),
+                description=self._sanitize_text(description),
+                image_url=first_image_url,
+                instructor=instructor,
+                sub_courses=videos
+            )
+
+        except Exception as e:
+            logger.error(f"Error parsing playlist data: {e}")
+            return None
+
+    def generate_sql(self, playlist_data: PlaylistData, category_id: int = 2) -> str:
+        """Generate SQL insert statements for the playlist data."""
+        sql = []
+
+        # Main course insert
+        sql.append(f"""
 INSERT INTO spiritai_v2.courses (
-    uuid, coursesCategoryId, name,
-    instructor, imageUrl, videoUrl, description
-)
-VALUES
-"""
+    coursesCategoryId, name, instructor, imageUrl, description
+) VALUES (
+    {category_id},
+    '{playlist_data.name}',
+    '{playlist_data.instructor}',
+    '{playlist_data.image_url}',
+    '{playlist_data.description}'
+);""")
 
-        output.write(insert_statement)
+        # Sub-courses insert
+        if playlist_data.sub_courses:
+            values = []
+            for video in playlist_data.sub_courses:
+                values.append(f"""(
+    {category_id},
+    '{video.name}',
+    '{video.instructor}',
+    '{video.image_url}',
+    '{video.video_url}',
+    ''
+)""")
 
-        for line in open(input_file):
-            url = line.strip()
-            if not url:
-                continue
-
-            print(f"Crawling data for: {url}")
-            result = fetch_youtube_playlist_data(url)
-
-            if result:
-                # For each video, create a value tuple
-                name = result["name"]
-                description = result["description"]
-                imageUrl = result["imageUrl"]
-                instructor = result["instructor"]
-
-                value_tuple = f"""
-                (
-                    2,  -- Setting coursesCategoryId to 2
-                    '{name}',  -- course name
-                    '{description}',  -- description
-                    '{imageUrl}',  -- imageUrl
-                    '{instructor}',  -- instructor
-                )
-                """
-                output.write(value_tuple)
-
-        insert_statement = """
+            sql.append(f"""
 INSERT INTO spiritai_v2.courses_sub (
-    coursesCategoryId, name,
-    instructor, imageUrl, videoUrl, description
-)
-VALUES
-"""
+    coursesCategoryId, name, instructor, imageUrl, videoUrl, description
+) VALUES
+{','.join(values)};""")
 
-        output.write(insert_statement)
+        return '\n'.join(sql)
 
-        for line in open(input_file):
-            url = line.strip()
+
+def process_urls(input_path: str, output_path: str):
+    """Process URLs from input file and generate SQL output."""
+    crawler = YouTubePlaylistCrawler()
+
+    input_path = Path(input_path)
+    output_path = Path(output_path)
+
+    if not input_path.exists():
+        logger.error(f"Input file not found: {input_path}")
+        return
+
+    with output_path.open('w', encoding='utf-8') as f:
+        for url in input_path.read_text().splitlines():
+            url = url.strip()
             if not url:
                 continue
 
-            print(f"Crawling data for: {url}")
-            result = fetch_youtube_playlist_data(url)
+            logger.info(f"Processing: {url}")
+            playlist_data = crawler.fetch_playlist_data(url)
 
-            if result:
-                # For each video, create a value tuple
-                for video in result['subCourses']:
-                    video_name = video['name']
-                    video_instructor = video['instructor']
-                    video_image_url = video['imageUrl']
-                    video_url = video['videoUrl']
+            if playlist_data:
+                sql = crawler.generate_sql(playlist_data)
+                f.write(sql + '\n')
+            else:
+                logger.error(f"Failed to process URL: {url}")
 
-                    value_tuple = f"""
-                    (
-                        2,  -- Setting coursesCategoryId to 2
-                        '{video_name}',  -- course name
-                        '{video_instructor}',  -- instructor
-                        '{video_image_url}',  -- imageUrl
-                        '{video_url}',  -- videoUrl
-                        '' -- Description
-                    )
-                    """
-                    all_values.append(value_tuple)
-
-        # Write all values in a single insert block
-        output.write(",\n".join(all_values))  # Join all values with commas
-        output.write(";\n")  # Close the SQL statement with a semicolon
-
-    print(f"Crawling complete. Results saved to {output_file}.")
+    logger.info(f"Processing complete. Results saved to {output_path}")
 
 
-# Usage example
-input_file = 'input_urls.txt'  # Replace with the path to your input file
-# Replace with the path to your output SQL file
-output_file = 'output_results.sql'
-
-crawl_from_file(input_file, output_file)
+if __name__ == "__main__":
+    process_urls('input_urls.txt', 'output_results.sql')
