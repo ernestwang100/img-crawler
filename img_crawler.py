@@ -80,7 +80,7 @@ def fetch_youtube_playlist_data(url: str):
 
             video_data.append(
                 {
-                    "name": title,
+                    "name": title.replace('’', '\'').replace('”', '\"').replace('“', '\"'),
                     "instructor": creator,  # Save instructor for each video
                     "imageUrl": f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg",
                     "videoUrl": f"https://www.youtube.com/embed/{video_id}",
@@ -89,7 +89,7 @@ def fetch_youtube_playlist_data(url: str):
 
         result = {
             "name": name,
-            "description": description,
+            "description": description.replace('’', '\''),
             "imageUrl": video_data[0]["imageUrl"] if video_data else "",
             "subCourses": video_data,  # Include the list of videos with instructor info
             "instructor": creator,
