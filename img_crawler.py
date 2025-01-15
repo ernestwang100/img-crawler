@@ -117,11 +117,47 @@ def crawl_from_file(input_file: str, output_file: str):
 
     with open(output_file, 'w') as output:
         # Start the SQL INSERT INTO statement once
+
         insert_statement = """
 INSERT INTO spiritai_v2.courses (
     uuid, coursesCategoryId, name,
-    instructor, imageUrl, videoUrl, description, isOpen, trialTime,
-    active, createTime
+    instructor, imageUrl, videoUrl, description
+)
+VALUES
+"""
+
+        output.write(insert_statement)
+
+        for line in open(input_file):
+            url = line.strip()
+            if not url:
+                continue
+
+            print(f"Crawling data for: {url}")
+            result = fetch_youtube_playlist_data(url)
+
+            if result:
+                # For each video, create a value tuple
+                name = result["name"]
+                description = result["description"]
+                imageUrl = result["imageUrl"]
+                instructor = result["instructor"]
+
+                value_tuple = f"""
+                (
+                    2,  -- Setting coursesCategoryId to 2
+                    '{name}',  -- course name
+                    '{description}',  -- description
+                    '{imageUrl}',  -- imageUrl
+                    '{instructor}',  -- instructor
+                )
+                """
+                output.write(value_tuple)
+
+        insert_statement = """
+INSERT INTO spiritai_v2.courses_sub (
+    coursesCategoryId, name,
+    instructor, imageUrl, videoUrl, description
 )
 VALUES
 """
@@ -145,15 +181,15 @@ VALUES
                     video_url = video['videoUrl']
 
                     value_tuple = f"""
-(
-    2,  -- Setting coursesCategoryId to 2
-    '{video_name}',  -- course name
-    '{video_instructor}',  -- instructor
-    '{video_image_url}',  -- imageUrl
-    '{video_url}',  -- videoUrl
-    '' -- Description
-)
-"""
+                    (
+                        2,  -- Setting coursesCategoryId to 2
+                        '{video_name}',  -- course name
+                        '{video_instructor}',  -- instructor
+                        '{video_image_url}',  -- imageUrl
+                        '{video_url}',  -- videoUrl
+                        '' -- Description
+                    )
+                    """
                     all_values.append(value_tuple)
 
         # Write all values in a single insert block
