@@ -3,367 +3,566 @@ INSERT INTO spiritai_v2.courses (
     coursesCategoryId, name, instructor, imageUrl, description, uuid, videourl
 ) VALUES (
     2,
-    'Wealth & Poverty',
-    'Robert Reich',
-    'https://img.youtube.com/vi/1f2blKai7HA/hqdefault.jpg',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+    'A Beginner’s Guide to Crypto - How To Start',
+    'Coin Bureau',
+    'https://img.youtube.com/vi/qqO9-uj-m2o/hqdefault.jpg',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+~~~~~
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+📺 Essential Videos 📺
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    'https://www.youtube.com/watch?v=1f2blKai7HA&list=PLOLArO56vjuoeaIPzKQibBDbx2m_Rfsit'
+~~~~~
+
+⛓️ 🔗 Useful Links 🔗 ⛓️
+
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
+
+~~~~~
+
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
+
+~~~~~
+
+📜 Disclaimer 📜
+
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
+
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    'https://www.youtube.com/watch?v=qqO9-uj-m2o&list=PLk1ALX7IOH_khTuoS7q-laqkTS6pojTyo'
 );
 
 INSERT INTO spiritai_v2.courses_sub (
-    name, imageUrl, videoUrl, description, courseuuid, uuid
+    name, imageUrl, videoUrl, description, courseuuid, uuid, sequenceorder
 ) VALUES
 (
-    'Class 1: “What’s Happened to Income & Wealth” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/1f2blKai7HA/hqdefault.jpg',
-    'https://www.youtube.com/embed/1f2blKai7HA',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+    'How to Buy BITCOIN: Step By Step Guide for Beginners 2024!',
+    'https://img.youtube.com/vi/qqO9-uj-m2o/hqdefault.jpg',
+    'https://www.youtube.com/embed/qqO9-uj-m2o',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+~~~~~
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+📺 Essential Videos 📺
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    'fcd7f2ca-50bc-4a9f-85dd-dbe6f5d820e6',
+~~~~~
 
-),(
-    'Class 2: “The Investor''s View” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/O8RpyqauWOQ/hqdefault.jpg',
-    'https://www.youtube.com/embed/O8RpyqauWOQ',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+⛓️ 🔗 Useful Links 🔗 ⛓️
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+~~~~~
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    '86adf4e9-e019-4034-b38d-6541b4e6073e',
+~~~~~
 
-),(
-    'Class 3: “Globalization, Tech & Future Work” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/8SZMUWP9wpE/hqdefault.jpg',
-    'https://www.youtube.com/embed/8SZMUWP9wpE',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+📜 Disclaimer 📜
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    '502ff94b-de40-4060-9f3a-dceafd79803d',
+    1  -- Add sequence_order
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
-
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    'fd59d22c-fe59-48d5-8117-463d4a6b65ed',
 
 ),(
-    'Class 4: “Widening Inequalities of Place” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/owqQQvmewaY/hqdefault.jpg',
-    'https://www.youtube.com/embed/owqQQvmewaY',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+    'How To Research Crypto In 2024: Ultimate Guide!!',
+    'https://img.youtube.com/vi/bw1piBAOG9s/hqdefault.jpg',
+    'https://www.youtube.com/embed/bw1piBAOG9s',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+~~~~~
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+📺 Essential Videos 📺
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    '8e612454-f72e-44ae-9e0c-9aedec8111f4',
+~~~~~
 
-),(
-    'Class 5: “Monopoly, Labor, and Antitrust” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/zokSkRNqZBM/hqdefault.jpg',
-    'https://www.youtube.com/embed/zokSkRNqZBM',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+⛓️ 🔗 Useful Links 🔗 ⛓️
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+~~~~~
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    '45d6ea9d-9248-471d-b3d7-aaf6afaf9328',
+~~~~~
 
-),(
-    'Class 6: “Political Power and Wealth” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/kQS2ptfayVI/hqdefault.jpg',
-    'https://www.youtube.com/embed/kQS2ptfayVI',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+📜 Disclaimer 📜
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    '93e5f95b-4908-479d-be77-44f964040957',
+    2  -- Add sequence_order
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
-
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    'a39d1c68-ddc1-4227-b4d0-faec7e4d05ba',
 
 ),(
-    'Class 7: “Taxing and Redistributing” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/uz350LTmusw/hqdefault.jpg',
-    'https://www.youtube.com/embed/uz350LTmusw',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+    'How To Trade Bitcoin: Complete Step-by-Step Guide To BTC Gains!',
+    'https://img.youtube.com/vi/q2cT_jMup_w/hqdefault.jpg',
+    'https://www.youtube.com/embed/q2cT_jMup_w',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+~~~~~
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+📺 Essential Videos 📺
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    '97439179-4733-4bb2-84ef-eaea525c5ee6',
+~~~~~
 
-),(
-    'Class 8: “Macroeconomic Policy” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/rKv9EYpEuWc/hqdefault.jpg',
-    'https://www.youtube.com/embed/rKv9EYpEuWc',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+⛓️ 🔗 Useful Links 🔗 ⛓️
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+~~~~~
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    'aa9f511a-39ff-4ed1-97b6-0dc4526d976f',
+~~~~~
 
-),(
-    'Class 9: “Remedying Racial Inequity” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/ZqWX4ve2VK4/hqdefault.jpg',
-    'https://www.youtube.com/embed/ZqWX4ve2VK4',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+📜 Disclaimer 📜
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    '52262c3a-ade5-4852-b110-7ad518730e85',
+    3  -- Add sequence_order
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
-
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    '567b312b-09d5-492f-8000-264a95800e2e',
 
 ),(
-    'Class 10: “Public Assistance for the Poor” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/lDmLAOgdNc4/hqdefault.jpg',
-    'https://www.youtube.com/embed/lDmLAOgdNc4',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+    'How To Find 100x Cryptos Early?! Complete Step-by-Step Guide!',
+    'https://img.youtube.com/vi/MaBcOuemWw0/hqdefault.jpg',
+    'https://www.youtube.com/embed/MaBcOuemWw0',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+~~~~~
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+📺 Essential Videos 📺
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    '4b12a02d-3c7c-45a1-9145-be1c0778a625',
+~~~~~
 
-),(
-    'Class 11: “Reducing Health Inequities” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/q9getidk8Yo/hqdefault.jpg',
-    'https://www.youtube.com/embed/q9getidk8Yo',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+⛓️ 🔗 Useful Links 🔗 ⛓️
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+~~~~~
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    '407c3f6f-e1c2-4fd8-84e1-203f28090a3a',
+~~~~~
 
-),(
-    'Class 12: “Reducing Environmental Inequities” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/uyXGgiXW5Qk/hqdefault.jpg',
-    'https://www.youtube.com/embed/uyXGgiXW5Qk',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+📜 Disclaimer 📜
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    '60238e39-a6ba-4a6b-9b0f-89368842bed5',
+    4  -- Add sequence_order
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
-
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    'af7a6388-fda7-4162-af7c-c886df424c02',
 
 ),(
-    'Class 13: “Reducing Inequities in Education” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/W9rtmYxwvD0/hqdefault.jpg',
-    'https://www.youtube.com/embed/W9rtmYxwvD0',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+    'Become a Memecoin Millionaire!! Our Guide To The NEXT 100x!!',
+    'https://img.youtube.com/vi/U21KQM-jqjM/hqdefault.jpg',
+    'https://www.youtube.com/embed/U21KQM-jqjM',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+~~~~~
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+📺 Essential Videos 📺
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    '5954381e-b26b-4850-976d-e4d993dba186',
+~~~~~
+
+⛓️ 🔗 Useful Links 🔗 ⛓️
+
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
+
+~~~~~
+
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
+
+~~~~~
+
+📜 Disclaimer 📜
+
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
+
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    'bb7ebc53-07da-426e-962d-2552ff8d6b2f',
+    5  -- Add sequence_order
+
 
 ),(
-    'Class 14: “The Future of Inequality (& You?)” by UC Berkeley Professor Reich',
-    'https://img.youtube.com/vi/H6ijLMsSBm8/hqdefault.jpg',
-    'https://www.youtube.com/embed/H6ijLMsSBm8',
-    'Welcome to my undergraduate course on Wealth and Poverty. This is the first of fourteen classes.
+    'How To Make Money in CRYPTO on a Budget: Investing Guide!!',
+    'https://img.youtube.com/vi/QO-iK4PlkWw/hqdefault.jpg',
+    'https://www.youtube.com/embed/QO-iK4PlkWw',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
 
-The questions we’ll focus on today: Is some inequality both inevitable and necessary? At what point, if ever, does it become a problem? What’s the difference between income and wealth inequality, and which is more important? How do income and wealth inequalities overlap with race and gender? And the real puzzle: why did these inequalities begin to widen so dramatically starting in the late 1970s and early 1980s, and continue widening since then?
+~~~~~
 
-Even though this isn’t a real classroom and I’m not with you in person, I hope you find this both enjoyable and challenging. Don’t expect to learn by just watching and listening, though. I want you to be an active learner — which means answering questions I pose and putting various puzzle pieces together. I’m not going to tell you what to think. I’m going to try to provoke you into thinking harder and more deeply.
+📺 Essential Videos 📺
 
-If you wish, I’ve shared some select readings from the syllabus for you. They’re available at: https://robertreich.substack.com/p/fi...
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
 
-Class Outline
--------------------------
-00:00 - Introduction
-14:35 - The paradox
-42:11 - Economic inequality by race
-52:39 - Mobility
-59:59 - Should we care?
-01:12:00 - The $1000 experiment
-01:20:17 - Public values and social change',
-    '69aa965d-b00f-4fcb-9e05-4960cad2936c',
-    '7d977855-3b90-4b6c-855a-bc6db018d97d',
+~~~~~
+
+⛓️ 🔗 Useful Links 🔗 ⛓️
+
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
+
+~~~~~
+
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
+
+~~~~~
+
+📜 Disclaimer 📜
+
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
+
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    'a8567e21-a869-4e4c-9ee3-d4a1c69b9cff',
+    6  -- Add sequence_order
+
+
+),(
+    'How To Get Rich: 10 Step Guide To Wealth Generation!!',
+    'https://img.youtube.com/vi/LVXI4R6pJRk/hqdefault.jpg',
+    'https://www.youtube.com/embed/LVXI4R6pJRk',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
+
+~~~~~
+
+📺 Essential Videos 📺
+
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
+
+~~~~~
+
+⛓️ 🔗 Useful Links 🔗 ⛓️
+
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
+
+~~~~~
+
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
+
+~~~~~
+
+📜 Disclaimer 📜
+
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
+
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    '5a4a310d-edfe-4123-b44d-d34a9706f197',
+    7  -- Add sequence_order
+
+
+),(
+    'Is It Time To BUY Crypto!? Altcoin Accumulation Guide!!',
+    'https://img.youtube.com/vi/IUmz-sUbnMw/hqdefault.jpg',
+    'https://www.youtube.com/embed/IUmz-sUbnMw',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
+
+~~~~~
+
+📺 Essential Videos 📺
+
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
+
+~~~~~
+
+⛓️ 🔗 Useful Links 🔗 ⛓️
+
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
+
+~~~~~
+
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
+
+~~~~~
+
+📜 Disclaimer 📜
+
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
+
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    '156bf258-645a-433f-a42f-23e9d290cc09',
+    8  -- Add sequence_order
+
+
+),(
+    'Explain BITCOIN to Complete Beginners: Ultimate Guide!!',
+    'https://img.youtube.com/vi/SXqfFTmYmT0/hqdefault.jpg',
+    'https://www.youtube.com/embed/SXqfFTmYmT0',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
+
+~~~~~
+
+📺 Essential Videos 📺
+
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
+
+~~~~~
+
+⛓️ 🔗 Useful Links 🔗 ⛓️
+
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
+
+~~~~~
+
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
+
+~~~~~
+
+📜 Disclaimer 📜
+
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
+
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    'ec2a2898-07b0-4a55-8174-587182865df9',
+    9  -- Add sequence_order
+
+
+),(
+    'Finding Coins BEFORE They EXPLODE!! Complete Guide!',
+    'https://img.youtube.com/vi/2GktMxR3wak/hqdefault.jpg',
+    'https://www.youtube.com/embed/2GktMxR3wak',
+    '🤖 Get Swissborg & up to €100 FREE 👉 https://join.swissborg.com/en/r/moonr...
+🛒 Get The Hottest Crypto Deals 👉 http://www.coinbureau.com/deals
+💥 Coin Bureau Discord 👉 https://go.coinbureau.com/cb-discord
+📲 Insider Info in our Socials 👉 https://www.coinbureau.com/socials/
+👕 Best Crypto Merch 👉 https://store.coinbureau.com
+🔥 TOP Crypto TIPS In Our Newsletter 👉 https://www.coinbureau.com/newsletters/
+
+~~~~~
+
+📺 Essential Videos 📺
+
+Trezor Wallet Tutorial 👉    • Trezor Crypto Wallet: Unboxing & Setu...  
+Bitcoin vs. Gold 👉    • Bitcoin vs. Gold: Which is Best? The ...  
+
+~~~~~
+
+⛓️ 🔗 Useful Links 🔗 ⛓️
+
+► Swissborg Sign Up Link: https://join.swissborg.com/r/vdigitLXRB
+► Swissborg Reward Tickets: https://help.swissborg.com/hc/en-gb/a...
+► Swissborg Full Tutorial: https://www.coinbureau.com/review/swi...
+► How To Buy Bitcoin in The UK: https://www.coinbureau.com/guides/how...
+► How To Buy Bitcoin in The US: https://www.coinbureau.com/guides/how...
+
+~~~~~
+
+TIMESTAMPS -
+0:00 Intro
+0:51 Bitcoin vs. BTC
+3:55 How To Buy Bitcoin
+6:50 Create A Swissborg Account
+11:59 Buy BTC, Get Free Crypto
+15:22 Bitcoin Tips For Max Gains
+19:53 Outro
+
+~~~~~
+
+📜 Disclaimer 📜
+
+The information contained herein is for informational purposes only. Nothing herein shall be construed to be financial legal or tax advice. The content of this video is solely the opinions of the speaker who is not a licensed financial advisor or registered investment advisor. Trading cryptocurrencies poses considerable risk of loss. The speaker does not guarantee any particular outcome.
+
+#Crypto #BTC #Bitcoin',
+    '39756e7a-40c0-4bd5-b493-8a5017be0df6',
+    '9ba763b5-b6ee-45b6-b764-68cf202775b8',
+    10  -- Add sequence_order
+
 
 );

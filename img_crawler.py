@@ -23,6 +23,7 @@ class VideoData:
     list_uuid: str
     description: str
     uuid: str
+    sequence_order: int
 
 
 @dataclass
@@ -125,7 +126,7 @@ class YouTubePlaylistCrawler:
             videos = []
             instructor = "Unknown"
 
-            for item in video_items:
+            for index, item in enumerate(video_items):
                 video_renderer = item.get("playlistPanelVideoRenderer", {})
                 if not video_renderer:
                     continue
@@ -158,6 +159,7 @@ class YouTubePlaylistCrawler:
                         list_uuid=playlist_uuid,
                         description=self._sanitize_text(video_description),
                         uuid=str(uuid.uuid4()),
+                        sequence_order=index + 1,
                     )
                 )
 
@@ -207,6 +209,8 @@ INSERT INTO spiritai_v2.courses (
     '{video.description}',
     '{video.list_uuid}',
     '{video.uuid}',
+    {video.sequence_order}  -- Add sequence_order
+
 
 )"""
                 )
@@ -214,7 +218,7 @@ INSERT INTO spiritai_v2.courses (
             sql.append(
                 f"""
 INSERT INTO spiritai_v2.courses_sub (
-    name, imageUrl, videoUrl, description, courseuuid, uuid
+    name, imageUrl, videoUrl, description, courseuuid, uuid, sequenceorder
 ) VALUES
 {','.join(values)};"""
             )
