@@ -183,45 +183,35 @@ class YouTubePlaylistCrawler:
         """Generate SQL insert statements for the playlist data."""
         sql = []
 
+        # Check and insert playlist data
         sql.append(
             f"""
 INSERT INTO spiritai_v2.courses (
     coursesCategoryId, name, instructor, imageUrl, description, uuid, videourl
-) VALUES (
-    {category_id},
-    '{playlist_data.name}',
-    '{playlist_data.instructor}',
-    '{playlist_data.image_url}',
-    '{playlist_data.description}',
-    '{playlist_data.uuid}',
-    '{playlist_data.url}'
+)
+SELECT {category_id}, '{playlist_data.name}', '{playlist_data.instructor}', 
+       '{playlist_data.image_url}', '{playlist_data.description}', 
+       '{playlist_data.uuid}', '{playlist_data.url}'
+WHERE NOT EXISTS (
+    SELECT 1 FROM spiritai_v2.courses WHERE name = '{playlist_data.name}'
 );"""
         )
 
+        # Check and insert sub-course data
         if playlist_data.sub_courses:
-            values = []
             for video in playlist_data.sub_courses:
-                values.append(
-                    f"""(
-    '{video.name}',
-    '{video.image_url}',
-    '{video.video_url}',
-    '{video.description}',
-    '{video.list_uuid}',
-    '{video.uuid}',
-    {video.sequence_order}  -- Add sequence_order
-
-
-)"""
+                sql.append(
+                    f"""
+    INSERT INTO spiritai_v2.courses_sub (
+        name, imageUrl, videoUrl, description, courseuuid, uuid, sequenceorder
+    )
+    SELECT '{video.name}', '{video.image_url}', '{video.video_url}', 
+        '{video.description}', '{video.list_uuid}', 
+        '{video.uuid}', {video.sequence_order}
+    WHERE NOT EXISTS (
+        SELECT 1 FROM spiritai_v2.courses_sub WHERE name = '{video.name}'
+    );"""
                 )
-
-            sql.append(
-                f"""
-INSERT INTO spiritai_v2.courses_sub (
-    name, imageUrl, videoUrl, description, courseuuid, uuid, sequenceorder
-) VALUES
-{','.join(values)};"""
-            )
 
         return "\n".join(sql)
 
