@@ -22,6 +22,7 @@ class VideoData:
     video_url: str
     list_uuid: str
     description: str
+    uuid: str
 
 
 @dataclass
@@ -116,7 +117,6 @@ class YouTubePlaylistCrawler:
             )
 
             playlist_uuid = str(uuid.uuid4())
-
             video_items = playlist_data.get("contents", [])
             if not video_items:
                 logger.error(f"No video items found in {url}")
@@ -132,10 +132,18 @@ class YouTubePlaylistCrawler:
 
                 video_id = video_renderer.get("videoId", "")
                 title = video_renderer.get("title", {}).get("simpleText", "N/A")
-                video_url = f"https://www.youtube.com/watch?v={video_id}"
 
-                # Fetch video description
-                video_description = self._fetch_video_description(video_url)
+                # Fetch video description directly from yt_initial_data
+                video_description = (
+                    yt_initial_data.get("contents", {})
+                    .get("twoColumnWatchNextResults", {})
+                    .get("results", {})
+                    .get("results", {})
+                    .get("contents", [])[1]
+                    .get("videoSecondaryInfoRenderer", {})
+                    .get("attributedDescription", {})
+                    .get("content", "Description not available")
+                )
 
                 runs = video_renderer.get("longBylineText", {}).get("runs", [])
                 if runs:
@@ -149,6 +157,7 @@ class YouTubePlaylistCrawler:
                         video_url=f"https://www.youtube.com/embed/{video_id}",
                         list_uuid=playlist_uuid,
                         description=self._sanitize_text(video_description),
+                        uuid=str(uuid.uuid4()),
                     )
                 )
 
@@ -175,7 +184,7 @@ class YouTubePlaylistCrawler:
         sql.append(
             f"""
 INSERT INTO spiritai_v2.courses (
-    coursesCategoryId, name, instructor, imageUrl, description, uuid, url
+    coursesCategoryId, name, instructor, imageUrl, description, uuid, videourl
 ) VALUES (
     {category_id},
     '{playlist_data.name}',
@@ -192,20 +201,20 @@ INSERT INTO spiritai_v2.courses (
             for video in playlist_data.sub_courses:
                 values.append(
                     f"""(
-    {category_id},
     '{video.name}',
-    '{video.instructor}',
     '{video.image_url}',
     '{video.video_url}',
     '{video.description}',
-    '{video.list_uuid}'
+    '{video.list_uuid}',
+    '{video.uuid}',
+
 )"""
                 )
 
             sql.append(
                 f"""
 INSERT INTO spiritai_v2.courses_sub (
-    coursesCategoryId, name, instructor, imageUrl, videoUrl, description, courseuuid
+    name, imageUrl, videoUrl, description, courseuuid, uuid
 ) VALUES
 {','.join(values)};"""
             )
